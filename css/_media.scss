@@ -1,0 +1,375 @@
+
+@media only screen and (max-width: 480px) {
+
+    header{
+        background: url(../img/img-header.png) no-repeat center / cover;
+        min-height: 100vh;
+        @include overlay;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo nav"
+        "title title"
+        "btn-1 btn-1"
+        "btn-2 btn-2";
+    }
+    .nav-link{
+        display: none;
+    }
+    .menu-btn{
+        float: right;
+        width: 50px;
+        height: 50px;
+        padding-top: 50px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .btn-2{
+        grid-area:btn-2;
+        justify-self: center;
+    }
+    .nav-item{
+        padding-top: 50px;
+        display: block;
+        list-style-type: none;
+    }
+    .grid-section{
+        margin-top: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a1"
+        "a2" 
+        "a3"
+        "a4" 
+        "a5" 
+        "a6"
+        "a7"
+        "a8" 
+        "a9"
+        "section-first-btn";
+    }
+    .section-btn{
+        grid-area: section-first-btn;
+    }
+    .main-grid{
+        padding: 10vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        background: $bc-color;  
+    }
+    .form{
+        background:$dark-color;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        grid-template-areas: 
+        "input-1"
+        "input-2"
+        "main-btn";
+    }
+    .grid-posts{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "p1"
+        "p2" 
+        "p3"
+        "p4" 
+        "p5" 
+        "p6";
+    }
+    .input-2{
+        @include input;
+        grid-area: input-2;  
+        justify-self: center;
+        margin-top: 20px;
+        max-width: 100vh;
+    }
+    .main-btn{
+        grid-area: main-btn;
+        justify-self: center;
+        @include btn-style;
+        background-color: inherit;
+        @include overlay;
+        padding: 15px 110px;
+        font-size: 20px;
+        margin-top: 20px;
+        max-width: 100vh;
+    }
+};
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    header{
+        background: url(../img/img-header.png) no-repeat center / cover;
+        min-height: 100vh;
+        @include overlay;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo nav"
+        "title title"
+        "btn-1 btn-1"
+        "btn-2 btn-2";
+    }
+    .nav-link{
+        display: none;
+    }
+    .menu-btn{
+        float: right;
+        width: 50px;
+        height: 50px;
+        padding-top: 50px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .btn-2{
+        grid-area:btn-2;
+        justify-self: center;
+    }
+    .nav-item{
+        padding-top: 50px;
+        display: block;
+        list-style-type: none;
+    }
+    .grid-section{
+        margin-top: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a1"
+        "a2" 
+        "a3"
+        "a4" 
+        "a5" 
+        "a6"
+        "a7"
+        "a8" 
+        "a9"
+        "section-first-btn";
+    }
+    .section-btn{
+        grid-area: section-first-btn;
+    }
+    .main-grid{
+        padding: 10vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        background: $bc-color;  
+    }
+    .form{
+        background:$dark-color;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        grid-template-areas: 
+        "input-1"
+        "input-2"
+        "main-btn";
+    }
+    .grid-posts{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "p1"
+        "p2" 
+        "p3"
+        "p4" 
+        "p5" 
+        "p6";
+    }
+    .input-2{
+        @include input;
+        grid-area: input-2;  
+        justify-self: center;
+        margin-top: 20px;
+        max-width: 100vh;
+    }
+    .main-btn{
+        grid-area: main-btn;
+        justify-self: center;
+        @include btn-style;
+        background-color: inherit;
+        @include overlay;
+        padding: 15px 110px;
+        font-size: 20px;
+        margin-top: 20px;
+        max-width: 100vh;
+    }
+};
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+
+    body{
+        min-width: 100vw;
+    }
+    header{
+        background: url(../img/img-header.png) no-repeat center / cover;
+        min-height: 100vh;
+        @include overlay;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo . nav nav"
+        "title title title title"
+        "btn-1 btn-1 btn-2 btn-2";
+    }
+    .menu-btn{
+        display: none;
+    }
+    .btn-2{
+        grid-area:btn-2;
+        justify-self: start;
+    }
+     .nav-item{
+        padding-top: 50px;
+        display: inline-grid;
+        list-style-type: none;
+    }
+    .grid-section{
+        margin-top: 10px;
+        height: 100vh;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "a1 a1 a2 a3"
+        "a4 a5 a5 a6"
+        "a7 a8 a9 a6";
+    }
+    .main-grid{
+        padding: 10vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        background: $bc-color;  
+    }
+    .form{
+        padding-left: 10vh;
+        padding-right: 10vh;
+        background:$dark-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        grid-template-areas: 
+        "input-1 input-2 main-btn";
+    }
+    .grid-posts{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "p1 p1 p2 p3"
+        "p4 p5 p6 p6";
+    }
+    .input-2{
+        @include input;
+        grid-area: input-2;  
+        justify-self: center;
+    }
+    .main-btn{
+        grid-area: main-btn;
+        justify-self: center;
+        @include btn-style;
+        background-color: inherit;
+        @include overlay;
+        padding: 15px 110px;
+        font-size: 20px;
+    }
+};
+
+@media only screen and (min-width: 1280px) {
+
+    header{
+        background: url(../img/img-header.png) no-repeat center / cover;
+        min-height: 100vh;
+        @include overlay;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "logo . . nav"
+        "title title title title"
+        ". btn-1 btn-2 .";     
+    }
+    .menu-btn{
+        display: none;
+    }
+   .btn-2{
+       grid-area:btn-2;
+       justify-self: start;
+    }
+    .nav-item{
+        padding-top: 50px;
+        display: inline-grid;
+        list-style-type: none;
+    }
+    .grid-section{
+        margin-top: 10px;
+        height: 100vh;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "a1 a1 a2 a3"
+        "a4 a5 a5 a6"
+        "a7 a8 a9 a6";
+    }
+    .main-grid{
+        padding: 10vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        background: $bc-color;  
+    }
+    .form{
+        padding-left: 10vh;
+        padding-right: 10vh;
+        background:$dark-color;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        grid-template-areas: 
+        "input-1 input-2 main-btn";
+    }
+    .grid-posts{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "p1 p1 p2 p3"
+        "p4 p5 p6 p6";
+    }
+    .main-btn{
+        grid-area: main-btn;
+        justify-self: center;
+        @include btn-style;
+        background-color: inherit;
+        @include overlay;
+        padding: 15px 110px;
+        font-size: 20px;
+    }
+    .input-2{
+        @include input;
+        grid-area: input-2;  
+        justify-self: center;
+
+    }
+};
+
+
+

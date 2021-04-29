@@ -1,0 +1,63 @@
+@mixin btn-style{
+    color:  $font-color;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.7s linear;
+    letter-spacing: 0.1em;
+    font-size: 18px; 
+}
+@mixin btn-hover {
+    background-color: $hover-color;
+    text-decoration: none;
+    color: $font-color;
+}
+@mixin link-style{
+    text-decoration: none;
+    color: $font-color;
+}
+@mixin overlay{
+    background-color: $dark-color;
+    opacity: 0.8; 
+    background-blend-mode: multiply;
+}
+@mixin grid-item{
+    border: 1px solid grey;
+    cursor: pointer; 
+    background-size: 100% 100%;
+    transition: background-size .3s ease-in;
+
+        &:hover{
+           background-size: 110% 110%;
+        }   
+}
+@mixin input{
+    @include btn-style;
+    background-color: inherit;
+    @include overlay;
+    padding: 15px 80px;
+    font-size: 20px;
+    text-align: left;
+
+        &:hover{
+            border: 1px solid grey;
+        }
+} 
+@mixin header{
+    color: $dark-color;
+    font-weight: 700;
+    font-size: 26px;
+}
+@mixin post{
+    background: $bc-color;
+    cursor: pointer;
+    transition: 0.8s;
+
+        &:hover{
+            transform: scale(1.03);
+            background-color:#bbbbbbbb;
+        };
+    
+        &:hover > .post-title, .post-text {
+            color: #2d3651;
+        }
+}

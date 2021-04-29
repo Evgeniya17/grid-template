@@ -1,0 +1,299 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+@import '_media.scss';
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: $font-family;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header"
+    "first-section first-section first-section first-section"
+    "main main main main"
+    "second-section second-section second-section second-section"
+    "footer footer footer footer";
+}
+.header-part{
+    grid-area: header;
+    grid-row: header;
+    grid-column: header;
+}
+.first-section{
+    grid-area: first-section;
+    grid-row: first-section;
+    grid-column: first-section;
+}
+.main-part{
+    grid-area: main;
+    grid-row:  main;
+    grid-column:  main;
+}
+.second-section{
+    grid-area: second-section;
+    grid-row: second-section;
+    grid-column: second-section;
+}
+.footer-part{
+    grid-area: footer;
+    grid-row: footer;
+    grid-column: footer;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 60px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color:$font-color;
+}
+.header-logo{
+    grid-area: logo;
+    justify-self: center;
+    padding-top: 50px;
+    font-size: 1.5rem;
+}
+.header-navigation{
+   grid-area: nav;
+   justify-self: center;
+}
+.nav-link{
+    margin-right: 30px;
+    text-decoration: none;
+    color: $font-color;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.4s linear;
+}
+.nav-link:hover{
+    color: $hover-color;
+    cursor: pointer;
+}
+.header-btn{
+    @include btn-style;
+    background-color: inherit;
+    text-decoration: none; 
+    border: 2px solid $font-color;
+    padding: 15px 55px;
+}
+.header-btn:hover{
+    background: $hover-color;    
+}
+.header-title{
+   grid-area: title;
+   justify-self: center;
+}
+.btn-1{
+    grid-area:btn-1;
+    justify-self: center;
+}
+.section-btn{
+    @include btn-style;
+    @include link-style;
+    @include overlay;
+    border: 2px solid black;
+    padding: 15px 125px;
+    margin-top: 20px;   
+    margin-bottom: 40px; 
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-btn:hover{
+    @include btn-hover;
+}
+.section-title{
+    font-size: 24px;
+    text-align: center;
+
+}
+.section-link{
+    @include link-style;
+    letter-spacing: 0.05em;
+} 
+.html-item{
+    grid-row: a1;
+    grid-column: a1;
+    background: url(../img/img-html.png) no-repeat center / cover;
+    grid-area: a1;
+    @include grid-item;
+    @include overlay;
+}
+.css-item{
+    grid-row: a2;
+    grid-column: a2;
+    background:  url(../img/img-css.png) no-repeat center / cover;
+    grid-area: a2;
+    @include grid-item;
+    @include overlay;
+}
+.markup-item{
+    grid-row: a3;
+    grid-column: a3;
+    background:  url(../img/img-markup.png) no-repeat center / cover;
+    grid-area: a3;
+    @include grid-item;
+    @include overlay;
+}
+.webdesign-item{
+    grid-row: a4;
+    grid-column: a4;
+    background: url(../img/img-webdesign.png) no-repeat center / cover;
+    grid-area: a4;
+    @include grid-item;
+    @include overlay;
+}
+.quality-item{
+    grid-row: a5;
+    grid-column: a5;
+    background: url(../img/img-qa.png) no-repeat center / cover;
+    grid-area: a5;
+    @include grid-item;
+    @include overlay;
+}
+.codding-item{
+    grid-row: a6;
+    grid-column: a6;
+    background:  url(../img/img-codding.png) no-repeat center / cover;
+    grid-area: a6;
+    @include grid-item;
+    @include overlay;
+}
+.adapt-item{
+    grid-row: a7;
+    grid-column: a7;
+    background: url(../img/img-adaptability.png) no-repeat center / cover;
+    grid-area: a7;
+    @include grid-item;
+    @include overlay;
+}
+.php-item{
+    grid-row: a8;
+    grid-column: a8;
+    background: url(../img/img-php.png) no-repeat center / cover;
+    grid-area: a8;
+    @include grid-item;
+    @include overlay;
+}
+.seo-item{
+    grid-row: a9;
+    grid-column: a9;
+    background: url(../img/img-seo.png) no-repeat center / cover;
+    grid-area: a9;
+    @include grid-item;
+    @include overlay;
+}
+.main-header{
+    @include header;
+}
+.main-paragraph{
+    color: $post-text-color;
+    font-size: 20px;
+}
+.main-img{
+    justify-self:center;
+} 
+.input-1{
+    grid-area: input-1;  
+    justify-self: center;
+   @include input;
+}
+.main-btn:hover{
+    @include btn-hover;
+    border: 2px solid #fff;
+}
+.post-1{
+    grid-row: p1;
+    grid-column: p1;
+    grid-area: p1;
+    @include post;
+}
+.post-2{
+    grid-row: p2;
+    grid-column: p2;
+    grid-area: p2;
+    @include post;
+}
+.post-3{
+    grid-row: p3;
+    grid-column: p3;
+    grid-area: p3;
+    @include post;
+}
+.post-4{
+    grid-row: p4;
+    grid-column: p4;
+    grid-area: p4;
+    @include post;
+}
+.post-5{
+    grid-row: p5;
+    grid-column: p5;
+    grid-area: p5;
+    @include post;
+}
+.post-6{
+    grid-row: p6;
+    grid-column: p6;
+    grid-area: p6;
+    @include post;
+}
+.post-img{
+    width: 100%;
+}
+.post-title, .post-text{
+    text-align: center;
+    color: $post-text-color;
+}
+.post-header{
+    @include header;
+    padding-bottom: 20px;
+}
+.contacts{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "links"
+    "text-line" ;
+    grid-gap:30px;
+    background-color: $dark-color;
+}
+.link-container{
+    padding-top: 50px;
+    justify-self: center;
+}
+.footer-link{
+    font-size: 36px;
+    color:$font-color;
+    grid-area: links;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.footer-link:hover{
+    color:$hover-color;
+}
+.copyright{
+    text-align: center;
+    justify-self:center;
+    grid-area: text-line;
+    text-transform: uppercase;
+    white-space: pre-line;
+    padding-bottom: 50px;
+}
+#line-1{
+    justify-self: center;
+    color: $bc-color;
+    opacity: 0.3;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+}
+#line-2{
+    justify-self: center;
+    color: $font-color;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
